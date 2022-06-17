@@ -1,0 +1,72 @@
+body {
+  background-color:black;
+}
+  
+h1{
+  color: goldenrod;
+  text-align: center;
+  font-size: 60px;
+  font-family: "Montserrat",sans-serif;
+}
+
+h3{
+  color: goldenrod;
+  text-align: center;
+  font-size: 30px;
+  font-family: "Montserrat",sans-serif;
+}
+
+h6 {
+  color:goldenrod;
+  text-align: center;
+  margin-bottom: 10%;
+  font-size: 30px;
+  font-family: "Montserrat",sans-serif;
+}
+
+.material-icons.md-48 { font-size: 40px; }
+
+button {
+  color:black;
+  border: none;
+  background-color: white;
+  font-size: 18px;
+  justify-content: center;
+  color: black;
+  padding: 18px;
+  text-decoration: none;
+  display: block;
+}
+
+input[type="file"] {
+  display:none;
+}
+
+#video-container{
+  text-align: center;
+}
+#form-div{
+  display:flex;
+}
+#predict,#uploadfile {
+  color:white;
+  padding:10px;
+  background-color: maroon;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat",sans-serif;
+}
+
+
+
+#overall-div{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#predict:hover {background-color: white; color:maroon}
+#uploadfile:hover {background-color: white; color:maroon}
