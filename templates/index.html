@@ -4,6 +4,7 @@
     <title>Shot Probability Predictor</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='mystyle.css') }}"/>
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
 </head>
@@ -28,13 +29,13 @@
                         </i>
                         Upload a video
                     </label>
-                    <!-- <input id='predict' type="submit" value="Predict"></input> -->
+                    <a class="github" style="margin-left:15px;text-decoration-line: None;" target="_blank" href="https://github.com/NohanJoemon/Basketball-video-classification"><i style="font-size:20px;" class="fa fa-github"></i>  &nbsp; Github link </a>
                 </div>
             </form>
         </div>
         <h5>Note: Video files should be of less than 2 seconds duration. You can download videos from <a target="_blank" href="https://drive.google.com/drive/u/1/folders/1EWkSYgyTKOWqqTYkTfRzKC3vLesaXIIv">here</a> if required.</h5>
-        
-        
+    
+        <br><br><br><br>
         {% if video_disp %}
         <div id="video-container" style="text-align:centre;">
                 <h3>Uploaded Video</h3>

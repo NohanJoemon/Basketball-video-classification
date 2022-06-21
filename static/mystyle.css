@@ -58,7 +58,8 @@ input[type="file"] {
 #form-div{
   display:flex;
 }
-#predict,#uploadfile {
+
+#uploadfile,.github {
   color:white;
   padding:10px;
   background-color: maroon;
@@ -79,5 +80,5 @@ input[type="file"] {
   align-items: center;
 }
 
-#predict:hover {background-color: white; color:maroon}
 #uploadfile:hover {background-color: white; color:maroon}
+.github:hover {background-color: white; color:maroon}
