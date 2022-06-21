@@ -16,7 +16,7 @@
         Basket Ball Shot Classification
     </h1></p>
 
-    <h5>Developed by: Althaf Nazar, Sreejith N, Nohan Joemon and Gautham Govind</h5>
+    <h2>Developed by: Althaf Nazar, Sreejith N, Nohan Joemon and Gautham Govind</h2>
     <div id="overall-div">
         <div>
             <form action="/" method="POST" enctype="multipart/form-data">
@@ -32,7 +32,8 @@
                 </div>
             </form>
         </div>
-
+        <h5>Note: Video files should be of less than 2 seconds duration. You can download videos from <a target="_blank" href="https://drive.google.com/drive/u/1/folders/1EWkSYgyTKOWqqTYkTfRzKC3vLesaXIIv">here</a> if required.</h5>
+        
         
         {% if video_disp %}
         <div id="video-container" style="text-align:centre;">
@@ -41,11 +42,24 @@
                     <source src="{{ url_for('static', filename=video_path) }}" type="video/mp4">
                 </video>
         </div>
-
-        <div>
-            <h3 id = "ans">{{ prediction }}</h3>
-        </div>
         {% endif %}
+
+        {% if ans==1 %}
+            <div>
+                <h3 id = "ans">Wow, that's a shot 	&#129321;</h3>
+            </div>
+            <audio autoplay>
+                <source src="{{ url_for('static', filename='scoring.mp3') }}" type="audio/mpeg">
+            </audio>
+        {% endif %}
+        {% if ans==0 %}
+            <div>
+                <h3 id = "ans">That's not a shot &#128542;</h3>
+            </div>
+            <audio autoplay>
+                <source src="{{ url_for('static', filename='non_scoring.mp3') }}" type="audio/mpeg">
+            </audio>
+            {% endif %}
     </div>
 
 

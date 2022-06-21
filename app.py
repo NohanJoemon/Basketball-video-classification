@@ -26,7 +26,7 @@ def predict():
         video = request.files['input_file']
         filename,ans = predictor.predict(video,video_path)
         filename='temp/'+filename
-    return render_template("index.html", video_path = filename, video_disp=+video_disp, prediction = 'Prediction: '+str(ans))
+    return render_template("index.html", video_path = filename, video_disp=+video_disp, prediction = 'Prediction: '+str(ans),ans=ans)
 
 
 if __name__=="__main__":
