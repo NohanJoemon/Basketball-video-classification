@@ -16,11 +16,11 @@
         Basket Ball Shot Classification
     </h1></p>
 
-
+    <h5>Developed by: Althaf Nazar, Sreejith N, Nohan Joemon and Gautham Govind</h5>
     <div id="overall-div">
         <div>
-            <form action="/#predictions" method="POST" enctype="multipart/form-data">
-                <input type="file" id="input_file" name="input_file" accept="video/mp4">
+            <form action="/" method="POST" enctype="multipart/form-data">
+                <input type="file" id="input_file" name="input_file" accept="video/mp4" onchange="this.form.submit()">
                 <div id="form-div">
                     <label id = "uploadfile" for="input_file">
                         <i class="material-icons">
@@ -28,7 +28,7 @@
                         </i>
                         Upload a video
                     </label>
-                    <input id='predict' type="submit" value="Predict"></input>
+                    <!-- <input id='predict' type="submit" value="Predict"></input> -->
                 </div>
             </form>
         </div>
@@ -37,7 +37,7 @@
         {% if video_disp %}
         <div id="video-container" style="text-align:centre;">
                 <h3>Uploaded Video</h3>
-                <video height="300" width="500" controls>
+                <video height="300" width="500" muted controls>
                     <source src="{{ url_for('static', filename=video_path) }}" type="video/mp4">
                 </video>
         </div>
