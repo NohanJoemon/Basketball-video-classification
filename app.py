@@ -10,7 +10,6 @@ app = Flask(__name__)
 # Set paths to upload folder
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 video_path=  os.path.join(os.path.join(APP_ROOT, 'static'),'temp')
-wpath =  os.path.join(os.path.join(APP_ROOT, 'static'),'weight.hdf5')
 
 # Main route
 @app.route("/",methods=["GET","POST"])
@@ -25,7 +24,7 @@ def predict():
     if request.method == "POST":
         video_disp=1
         video = request.files['input_file']
-        filename,ans = predictor.predict(video,video_path,wpath=wpath)
+        filename,ans = predictor.predict(video,video_path)
         filename='temp/'+filename
     return render_template("index.html", video_path = filename, video_disp=+video_disp, prediction = 'Prediction: '+str(ans))
 

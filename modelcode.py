@@ -1,8 +1,9 @@
 from keras.applications.vgg16 import VGG16
 from keras.models import Sequential
 from keras.layers import Dense, Dropout
+from keras.utils.data_utils import get_file
 
-def nn_model(wpath):
+def nn_model():
 
     # VGG16 Pretrained Model
     base_model = VGG16(weights='imagenet', include_top=False)
@@ -20,7 +21,10 @@ def nn_model(wpath):
     model.add(Dense(1, activation='sigmoid'))
 
     # Loading the trained weights
-    model.load_weights(wpath)
+    weights_path = get_file(
+                'model_weights',
+                'https://www.dropbox.com/s/o3t4r6iu5bxecbm/weight.hdf5?dl=1')
+    model.load_weights(weights_path )
 
     # Compiling the model
     model.compile(loss='binary_crossentropy',optimizer='Adam',metrics=['accuracy'])
