@@ -6,7 +6,7 @@
 Basketball is one of the most popular games in the world. In this project, we have developed a deep learning model using CNN that classifies a basketball clip into scoring or 
 non-scoring. We have made use of the VGG-16 pretrained model and for fine-tuning, we have used a dataset specifically containing scoring and non-scoring basketball clips. We have also deployed the app using heroku.
 
-**Authors: Althaf Nazar, Sreejith N, Nohan Joemon and Gautham Govind**
+**Developed by: Althaf Nazar, Sreejith N, Nohan Joemon and Gautham Govind**
 
 # Website preview
 https://basketball-shot-classification.herokuapp.com/
